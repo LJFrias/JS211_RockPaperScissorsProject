@@ -17,6 +17,36 @@ const rockPaperScissors = (hand1, hand2) => {
   // Write code here
   // Use the unit test to see what is expected
 
+// -User1 input of rock, paper, or scissors.
+// -User2 input of rock, paper, or scissors.
+// Compare User1 input to User2 input.
+// -If User1 input is 'rock' and User2 input is 'scissors', User1 wins.
+// If User1 input is 'rock' and User2 input is 'paper', User2 wins.
+// -If User1 input is 'rock' and User2 input is 'rock', it's a tie.
+// If User1 input is 'paper' and User2 input is 'rock', User1 wins.
+// If User1 input is 'paper' and User2 input is 'scissors', User2 wins.
+// -If User1 input is 'paper' and User2 input is 'paper', it's a tie.
+// If User1 input is 'scissors' and User2 input is 'paper', User1 wins.
+// If User1 input is 'scissors' and User2 input is 'rock', User2 wins.
+// -If User1 input is 'scissors' and User2 input is 'scissors', it's a tie.
+
+  hand1 = hand1.toLowerCase().trim()
+  hand2 = hand2.toLowerCase().trim()
+
+  if(hand1 === hand2){
+    return "It's a tie!"
+  }
+  else if((hand1 == 'rock' && hand2 == 'scissors') || (hand1 == 'paper' && hand2 == 'rock') || (hand1 == 'scissors' && hand2 == 'paper')){
+    return "Hand one wins!"
+  }
+  else if((hand1 == 'rock' && hand2 == 'paper') || (hand1 == 'paper' && hand2 == 'scissors') || (hand1 == 'scissors' && hand2 == 'rock')){
+    return "Hand two wins!"
+  }
+  else{
+    getPrompt()
+  }
+  
+
 }
 
 // the first function called in the program to get an input from the user
